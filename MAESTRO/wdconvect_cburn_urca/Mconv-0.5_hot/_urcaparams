@@ -9,13 +9,13 @@
 
  nx = 2560
  dens_base = 4.5e9
- temp_base = 2.0e8
+ temp_base = 3.0e8
 
  dens_conv_zone = -1.0
  M_conv_zone = 0.5
 
  low_density_cutoff = 1.e-3
- temp_fluff = 1.e7
+ temp_fluff = 1.8e7
 
  xmin = 0.0
  xmax = 5.12e8
