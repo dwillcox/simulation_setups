@@ -108,4 +108,22 @@
  velpert_scale = 1.d7
  velpert_steep = 1.d5
 
+ ! VODE Reactions ODE settings
+ burner_verbose = .false.
+
+ ! Set which jacobian to use
+ ! 1 = analytic jacobian
+ ! 2 = numerical jacobian
+ jacobian   = 1
+
+ retry_burn = .false.
+ renormalize_abundances = .false.
+
+ rtol_spec = 1.0d-12
+ rtol_enuc = 1.0d-9
+ rtol_temp = 1.0d-9
+ atol_spec = 1.0d-12
+ atol_enuc = 1.0d-9
+ atol_temp = 1.0d-9
+
 /
