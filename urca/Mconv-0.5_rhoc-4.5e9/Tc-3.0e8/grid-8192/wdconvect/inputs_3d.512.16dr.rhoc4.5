@@ -37,7 +37,11 @@
 
  ! stepping
  max_step  = 100000000
- stop_time = 10000.
+
+ !! It should take about 1000 seconds for the model
+ !! to equilibrate, so let's go a bit longer
+ !! for this exploratory simulation.
+ stop_time = 5000.
 
  cflfac = 0.8d0
 
@@ -102,11 +106,20 @@
  plot_h_with_use_tfromp = F
 
 
- ! perturbation
- velpert_amplitude = 1.d3
- velpert_radius = 2.d7
- velpert_scale = 1.d7
- velpert_steep = 1.d5
+ ! velocity perturbation
+ !! Set amplitude to an order of magnitude lower
+ !! than the expected convective velocity in the core.
+ velpert_amplitude = 1.d2
+ !! Set the spatial scale of fourier modes to roughly
+ !! the expected size of central convective zone.
+ velpert_scale     = 2.5d7
+ !! Set the radius of the perturbation to roughly
+ !! the expected size of central convective zone.
+ velpert_radius    = 2.5d7
+ !! Set the steepness distance to the grid width
+ !! on the finest zone. It will take roughly 5 zones
+ !! to damp the velocity perturbation.
+ velpert_steep     = 1.d6
 
  ! VODE Reactions ODE settings
  burner_verbose = .false.
